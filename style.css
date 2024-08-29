@@ -1,0 +1,139 @@
+/* General body styling */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Background for stars and meteors */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Star styling and animation */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    animation: twinkle 1s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.star1 { top: 10%; left: 20%; animation-duration: 2s; }
+.star2 { top: 30%; left: 50%; animation-duration: 2.5s; }
+.star3 { top: 60%; left: 80%; animation-duration: 3s; }
+.star4 { top: 80%; left: 10%; animation-duration: 2.5s; }
+.star5 { top: 40%; left: 70%; animation-duration: 3s; }
+.star6 { top: 20%; left: 90%; animation-duration: 2.5s; }
+.star7 { top: 70%; left: 40%; animation-duration: 3s; }
+.star8 { top: 50%; left: 20%; animation-duration: 2s; }
+.star9 { top: 80%; left: 60%; animation-duration: 2s; }
+.star10 { top: 30%; left: 10%; animation-duration: 2.5s; }
+
+/* Meteor styling and animation */
+.meteor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #777;
+    border-radius: 50%;
+    animation: meteor 5s linear infinite;
+}
+
+.meteor2 {
+    animation: meteor 7s linear infinite;
+}
+
+.meteor3 {
+    animation: meteor 6s linear infinite;
+}
+
+@keyframes meteor {
+    0% {
+        transform: translate(-50%, -100vh) rotate(45deg);
+    }
+    100% {
+        transform: translate(100vw, 100vh) rotate(45deg);
+    }
+}
+
+/* Universe container styling */
+.universe {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Orbit styling and animation */
+.orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation-timing-function: linear;
+}
+
+.orbit1 { animation: rotate 10s infinite linear; }
+.orbit2 { animation: rotate 12s infinite linear; }
+.orbit3 { animation: rotate 14s infinite linear; }
+.orbit4 { animation: rotate 16s infinite linear; }
+.orbit5 { animation: rotate 18s infinite linear; }
+.orbit6 { animation: rotate 20s infinite linear; }
+.orbit7 { animation: rotate 22s infinite linear; }
+.orbit8 { animation: rotate 24s infinite linear; }
+.orbit9 { animation: rotate 26s infinite linear; }
+.orbit10 { animation: rotate 28s infinite linear; }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Exoplanet styling */
+.exoplanet {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none; /* Prevent tooltip from blocking mouse events */
+    z-index: 10;
+    transform: translateY(-100%);
+    display: none;
+}
